@@ -15,7 +15,7 @@ the page for readability and adds the weather:
 
 - **30 stories instead of 60:** the 10 most viral stories plus the 20 best
   briefs, one per top country, with every continent represented (Asia 9,
-  Europe 6, Americas 6, Middle East 2, Africa 3, Global 2, Oceania 2).
+  Europe 6, Americas 6, Middle East 2, Africa 3, Oceania 2, Global 2).
   Bigger text (12 px briefs), much more white space — far easier to read
   at 1024 px.
 - **Pixel-art style:** the whole page is drawn as a pastel pixel-art
@@ -76,9 +76,9 @@ outside this repository; only the rendered image ships here.)
 ## The program
 
 `main.ts` (Node 22, standard library only) copies `entry.png` to
-`/output/entry.png` (or `$MAKEFUN_OUTPUT_DIR`), then verifies the copy
-byte for byte with SHA-256 so a corrupt copy fails loudly. It runs with
-no network.
+`/output/entry.png` (or `$MAKEFUN_OUTPUT_DIR`), checks the file is a real
+PNG (magic bytes) and verifies the copy byte for byte with SHA-256, so a
+corrupt copy fails loudly. It runs with no network.
 
 ## Run it
 
